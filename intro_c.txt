@@ -1,0 +1,97 @@
+baSIC DaTa TYPeS
+Data type determines the set of values that a data item can take and the operations
+that can be performed on the item.
+C language provides four basic data types. Table 1.2 lists the data types,
+their size, range, and usage for a C programmer.
+The char data type is of one byte and is used to store single characters.
+Note that C does not provide any data type for storing text.
+
+might have been surprised to see that the range of char is given as –128 to 127.
+char is supposed to store characters not numbers, so why this range? The answer is
+that in the memory, characters are stored in their ASCII codes.
+For example, the character ‘A’ has the ASCII code of 65. 
+In memory we will not store ‘A’ but 65 (in binary number format).
+
+char  (n size byte)1  ((range) –128 to 127) To store characters.
+int	  (n size byte)2  ((range) –32768 to 32767) To store integer numbers.
+
+Data Type
+       char
+       unsigned char
+       signed char
+       int
+       unsigned int
+       signed int
+       short int
+       unsigned short int
+       signed short int
+       long int
+       unsigned long int
+       signed long int
+       float
+       double
+       long double
+Range
+              –128 to 127
+                 0 to 255
+              –128 to 127
+          –32768 to 32767
+               0 to 65535
+          –32768 to 32767
+          –32768 to 32767
+               0 to 65535
+          –32768 to 32767
+–2147483648 to 2147483647
+          0 to 4294967295
+–2147483648 to 2147483647
+       3.4E–38 to 3.4E+38
+     1.7E–308 to 1.7E+308
+   3.4E–4932 to 1.1E+4932
+Size in Bytes
+1
+1
+1
+2
+2
+2
+2
+2
+2
+4
+4
+4
+4
+8
+10
+
+While the smaller data types take less memory, the larger data types incur a performance penalty. 
+Although the data type we use for our variables does not have a big impact on the speed or memory
+usage of the application, we should always try to use int unless there is a need to use any other data type.
+
+Declaring Variables
+To declare a variable, specify the data type of the variable followed by its name. 
+The data type indicates the kind of values that the variable can store.
+Variable names should always be meaningful and must reflect the purpose of their usage in the program. 
+In C, variable declaration always ends with a semi-colon. For example,
+           int emp_num;
+           float salary;
+           char grade;
+           double balance_amount;
+           unsigned short int acc_no;
+In C, variables can be declared at any place in the program but two things must be kept in mind. 
+First, variables should be declared before using them. Second, variables should be declared closest 
+to their first point of use so that the source code is easier to maintain.
+
+Initializing Variables
+While declaring the variables, we can also initialize them with some value. For example,
+           int emp_num = 7;
+           float salary = 9800.99
+           char grade = ‘A’;
+           double balance_amount = 100000000;
+Constants
+Constants are identifiers whose values do not change. While values of variables can be changed at any time, 
+values of constants can never be changed. Constants are used to define fixed values like pi or the charge 
+on an electron so that their value does not get changed in the program even by mistake.
+Declaring Constants
+To declare a constant, precede the normal variable declaration with const keyword and assign it a value.
+           const float pi = 3.14;

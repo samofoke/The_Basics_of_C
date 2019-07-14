@@ -1,0 +1,35 @@
+WRITINg THe FIRST C PROgRaM
+To write a C program, we first need to write the code. For that, open a text editor.
+If you are a Windows user, you may use Notepad and if you prefer working on UNIX/Linux,
+you can use emac or vi. Once the text editor is opened on your screen, type the following statements:
+           
+		   #include <stdio.h>
+           int main()
+           {
+                 printf("\n Welcome to the world of C ");// prints the message on the screen
+                 return 0;// returns a value 0 to the operating system
+		   }
+
+After writing the code, select the directory of your choice and save the file as first.c.
+#include <stdio.h> This is the first statement in our code that includes a file called stdio.h. 
+This file has some in-built functions. By simply including this file in our code, we can use these 
+functions directly. stdio basically stands for Standard Input/Output, which means it has functions 
+for input and output of data like reading values from the keyboard and printing the results on the screen.
+int main() Every C program contains a main() function which is the starting point of the program. 
+int is the return value of the main function. After all the statements in the program have been executed, 
+the last statement of the program will return an integer value to the operating system. 
+The concepts will be clear to us when we read this chapter in toto. So even if you do not 
+understand certain things, do not worry. { } The two curly brackets are used to group all the related 
+statements of the main function.
+
+printf("\n Welcome to the world of C "); The printf function is defined in the stdio.h file and is used 
+to print text on the screen. The message that has to be displayed on the screen is enclosed within double 
+quotes and put inside brackets. \n is an escape sequence and represents a newline character. 
+It is used to print the message on a new line on the screen. Other escape sequences supported by C language
+return 0; This is a return command that is used to return value 0 to the operating system to give an 
+indication that there were no errors during the execution of the program.
+
+Arithmetic Operators
+Consider three variables declared as,
+    int a=9, b=3, result;
+
