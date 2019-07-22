@@ -1,0 +1,622 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\froman\fcharset0 Times-Roman;\f4\fmodern\fcharset0 Courier;\f5\froman\fcharset0 Times-Bold;
+\f6\fnil\fcharset0 Consolas;\f7\fswiss\fcharset0 Helvetica-BoldOblique;\f8\fnil\fcharset0 Consolas-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red228\green55\blue26;\red255\green255\blue255;
+\red11\green86\blue1;\red53\green53\blue53;\red0\green0\blue0;\red135\green135\blue135;\red152\green66\blue3;
+\red98\green0\blue117;\red0\green0\blue255;\red16\green120\blue67;\red227\green238\blue255;\red245\green245\blue245;
+\red0\green0\blue0;\red217\green217\blue217;\red15\green114\blue1;\red10\green82\blue135;\red109\green109\blue109;
+\red251\green0\blue129;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c84314;\cssrgb\c92549\c30588\c12549;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c40000\c0;\cssrgb\c27059\c27059\c27059;\cssrgb\c0\c0\c0;\cssrgb\c60000\c60000\c60000;\cssrgb\c66667\c33333\c0;
+\cssrgb\c46667\c0\c53333;\cssrgb\c0\c0\c100000;\cssrgb\c0\c53333\c33333;\cssrgb\c90980\c94902\c100000;\cssrgb\c96863\c96863\c96863;
+\cssrgb\c0\c0\c0\c90196;\cssrgb\c87843\c87843\c87843;\cssrgb\c0\c50980\c0;\cssrgb\c0\c40000\c60000;\cssrgb\c50196\c50196\c50196;
+\cssrgb\c100000\c7843\c57647;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16780\viewh16680\viewkind0
+\deftab720
+\pard\pardeftab720\sl660\sa300\qj\partightenfactor0
+
+\f0\fs56 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Doubly Linked List | Set 1 (Introduction and Insertion)\
+\pard\pardeftab720\sl380\qj\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+\cf2 We strongly recommend to refer following post as a prerequisite of this post.\
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://quiz.geeksforgeeks.org/linked-list-set-1-introduction/"}}{\fldrslt \cf3 \strokec3 Linked List Introduction}}\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://quiz.geeksforgeeks.org/linked-list-set-2-inserting-a-node/"}}{\fldrslt \cf3 \strokec3 Inserting a node in Singly Linked List}}\
+A\'a0
+\f1\b D
+\f0\b0 oubly\'a0
+\f1\b L
+\f0\b0 inked\'a0
+\f1\b L
+\f0\b0 ist (DLL) contains an extra pointer, typically called\'a0
+\f2\i previous pointer
+\f0\i0 , together with next pointer and data which are there in singly linked list.\
+\pard\pardeftab720\sl540\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png"}}{\fldrslt \cf3 \strokec3 \
+}}\pard\pardeftab720\sl540\sa200\partightenfactor0
+\cf2 Following is representation of a DLL node in C language.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls1\ilvl0
+\fs36 \cf3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 C\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls1\ilvl0\cf5 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Java\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Python3\
+\pard\pardeftab720\sl480\qj\partightenfactor0
+
+\f3\fs48 \cf6 \cb4 \strokec6 filter_none\
+\pard\pardeftab720\sl480\partightenfactor0
+\cf6 close
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 play_arrow
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 linkbrightness_4code
+\f0\fs32 \cf2 \cb1 \strokec2 \
+\pard\pardeftab720\sl341\qj\partightenfactor0
+
+\f4\fs28\fsmilli14240 \cf7 \strokec7 \
+\
+\
+\
+\
+\pard\pardeftab720\sl341\qr\partightenfactor0
+\cf8 \cb4 \strokec8 1\cb1 \
+\pard\pardeftab720\sl341\partightenfactor0
+\cf9 \cb4 \strokec9 /* Node of a doubly linked list */\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\sl341\qr\partightenfactor0
+\cf8 \cb4 \strokec8 2\cb1 \
+\pard\pardeftab720\sl341\partightenfactor0
+\cf10 \cb4 \strokec10 struct\cf7 \strokec7  \cf11 \strokec11 Node\cf7 \strokec7  \{ \cb1 \
+\pard\pardeftab720\sl341\qr\partightenfactor0
+\cf8 \cb4 \strokec8 3\cb1 \
+\pard\pardeftab720\sl341\partightenfactor0
+\cf7 \cb4 \strokec7     \cf12 \strokec12 int\cf7 \strokec7  data; \cb1 \
+\pard\pardeftab720\sl341\qr\partightenfactor0
+\cf8 \cb4 \strokec8 4\cb1 \
+\pard\pardeftab720\sl341\partightenfactor0
+\cf7 \cb4 \strokec7     \cf10 \strokec10 struct\cf7 \strokec7  \cf11 \strokec11 Node\cf7 \strokec7 * next; \cf9 \strokec9 // Pointer to next node in DLL \cf7 \cb1 \strokec7 \
+\pard\pardeftab720\sl341\qr\partightenfactor0
+\cf8 \cb4 \strokec8 5\cb1 \
+\pard\pardeftab720\sl341\partightenfactor0
+\cf7 \cb4 \strokec7     \cf10 \strokec10 struct\cf7 \strokec7  \cf11 \strokec11 Node\cf7 \strokec7 * prev; \cf9 \strokec9 // Pointer to previous node in DLL \cf7 \cb1 \strokec7 \
+\pard\pardeftab720\sl341\qr\partightenfactor0
+\cf8 \cb4 \strokec8 6\cb1 \
+\pard\pardeftab720\sl341\partightenfactor0
+\cf7 \cb4 \strokec7 \};\cb1 \
+\pard\pardeftab720\sl341\qj\partightenfactor0
+\cf7 \cb13 \
+\pard\pardeftab720\sl341\qj\partightenfactor0
+\cf7 \cb1 \
+\pard\pardeftab720\sl341\qr\partightenfactor0
+\cf8 \cb4 \strokec8 7\cb1 \
+\pard\pardeftab720\sl341\partightenfactor0
+\cf7 \cb4 \strokec7 \uc0\u8203 \cb1 \
+\pard\pardeftab720\sl341\qj\partightenfactor0
+\cf7 \
+\pard\pardeftab720\sl341\qj\partightenfactor0
+\cf7 \cb14 \
+\pard\pardeftab720\sl480\qj\partightenfactor0
+
+\f5\b\fs48 \cf6 \cb4 \strokec6 chevron_right\
+\pard\pardeftab720\sl460\partightenfactor0
+
+\f6\b0\fs30 \cf15 \cb16 \strokec15 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o: In function `_start':\
+(.text+0x20): undefined reference to `main'\
+collect2: error: ld returned 1 exit status\
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\f0\fs32 \cf2 \cb1 \strokec2 Following are advantages/disadvantages of doubly linked list over singly linked list.\
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\f1\b \cf2 Advantages over singly linked list
+\f0\b0 \uc0\u8232 
+\f1\b 1)
+\f0\b0 \'a0A DLL can be traversed in both forward and backward direction.\uc0\u8232 
+\f1\b 2)
+\f0\b0 \'a0The delete operation in DLL is more efficient if pointer to the node to be deleted is given.\uc0\u8232 
+\f1\b 3)\'a0
+\f0\b0 We can quickly insert a new node before a given node.\uc0\u8232 In singly linked list, to delete a node, pointer to the previous node is needed. To get this previous node, sometimes the list is traversed. In DLL, we can get the previous node using previous pointer.\
+\pard\pardeftab720\sl380\qj\partightenfactor0
+\cf2 \
+\
+\
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\f1\b \cf2 Disadvantages over singly linked list
+\f0\b0 \uc0\u8232 
+\f1\b 1)
+\f0\b0 \'a0Every node of DLL Require extra space for an previous pointer. It is possible to implement DLL with single pointer though (See\'a0{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-1/"}}{\fldrslt \cf3 \strokec3 this\'a0}}and\'a0{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-2/"}}{\fldrslt \cf3 \strokec3 this}}).\uc0\u8232 
+\f1\b 2)
+\f0\b0 \'a0All operations require an extra pointer previous to be maintained. For example, in insertion, we need to modify previous pointers together with next pointers. For example in following functions for insertions at different positions, we need 1 or 2 extra steps to set previous pointer.\
+
+\f1\b Insertion
+\f0\b0 \uc0\u8232 A node can be added in four ways\u8232 
+\f1\b 1)\'a0
+\f0\b0 At the front of the DLL\uc0\u8232 
+\f1\b 2)
+\f0\b0 \'a0After a given node.\uc0\u8232 
+\f1\b 3)
+\f0\b0 \'a0At the end of the DLL\uc0\u8232 
+\f1\b 4)
+\f0\b0 \'a0Before a given node.\
+\pard\pardeftab720\sl560\sa480\qj\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://practice.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/1"}}{\fldrslt 
+\f1\b\fs36 \cf3 \strokec3 Recommended: Please solve it on \'93
+\f7\i \ul PRACTICE
+\f1\i0 \ulnone \'94 first, before moving on to the solution.}}
+\f1\b\fs36 \
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\fs32 \cf2 1) Add a node at the front: (A 5 steps process)
+\f0\b0 \uc0\u8232 The new node is always added before the head of the given Linked List. And newly added node becomes the new head of DLL. For example if the given Linked List is 10152025 and we add an item 5 at the front, then the Linked List becomes 510152025. Let us call the function that adds at the front of the list is push(). The push() must receive a pointer to the head pointer, because push must change the head pointer to point to the new node (See\'a0{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/how-to-write-functions-that-modify-the-head-pointer-of-a-linked-list/"}}{\fldrslt \cf3 \strokec3 this}})\
+\pard\pardeftab720\sl540\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL_add_front1.png"}}{\fldrslt \cf3 \strokec3 \
+}}\pard\pardeftab720\sl540\sa200\partightenfactor0
+\cf2 Following are the 5 steps to add node at the front.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls2\ilvl0
+\fs36 \cf3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 C\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls2\ilvl0\cf5 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Java\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Python3\
+\pard\pardeftab720\sl480\qj\partightenfactor0
+
+\f3\fs48 \cf6 \cb4 \strokec6 filter_none\
+\pard\pardeftab720\sl480\partightenfactor0
+\cf6 edit
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 play_arrow
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 brightness_4
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth15600\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\f6\fs29\fsmilli14913 \cf17 \cb4 \strokec17 /* Given a reference (pointer to pointer) to the head of a list 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf2 \'a0\'a0\'a0\cf17 \strokec17 and an int, inserts a new node on the front of the list. */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\f8\b\fs29\fsmilli14913 \cf18 \strokec18 void
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 push(
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node** head_ref, 
+\f8\b \cf19 \strokec19 int
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 new_data) 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf7 \strokec7 \{ 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf2 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 1. allocate node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node* new_node = (
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node*)
+\f8\b \cf20 \strokec20 malloc
+\f6\b0 \cf7 \strokec7 (
+\f8\b \cf18 \strokec18 sizeof
+\f6\b0 \cf7 \strokec7 (
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node)); 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 2. put in the data\'a0 */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->data = new_data; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 3. Make next of new node as head and previous as NULL */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->next = (*head_ref); 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->prev = NULL; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 4. change prev of head node to new node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 if
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 ((*head_ref) != NULL) 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 (*head_ref)->prev = new_node; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 5. move the head to point to the new node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 (*head_ref) = new_node; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf7 \strokec7 \}
+\fs30\fsmilli15064 \cf2 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\f0\fs32 \cf2 \cb1 Four steps of the above five steps are same as\'a0{\field{\*\fldinst{HYPERLINK "http://quiz.geeksforgeeks.org/linked-list-set-2-inserting-a-node/"}}{\fldrslt \cf3 \strokec3 the 4 steps used for inserting at the front in singly linked list}}. The only extra step is to change previous of head.\
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\f1\b \cf2 2) Add a node after a given node.: (A 7 steps process)
+\f0\b0 \uc0\u8232 We are given pointer to a node as prev_node, and the new node is inserted after the given node.\
+\pard\pardeftab720\sl540\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL_add_middle1.png"}}{\fldrslt \cf3 \strokec3 \
+}}\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls3\ilvl0
+\fs36 \cf3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 C\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls3\ilvl0\cf5 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Java\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Python3\
+\pard\pardeftab720\sl480\qj\partightenfactor0
+
+\f3\fs48 \cf6 \cb4 \strokec6 filter_none\
+\pard\pardeftab720\sl480\partightenfactor0
+\cf6 edit
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 play_arrow
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 brightness_4
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth15600\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\f6\fs29\fsmilli14913 \cf17 \cb4 \strokec17 /* Given a node as prev_node, insert a new node after the given node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\f8\b\fs29\fsmilli14913 \cf18 \strokec18 void
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 insertAfter(
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node* prev_node, 
+\f8\b \cf19 \strokec19 int
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 new_data) 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf7 \strokec7 \{ 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf2 \'a0\'a0\'a0\'a0\cf17 \strokec17 /*1. check if the given prev_node is NULL */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 if
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 (prev_node == NULL) \{ 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f8\b \cf20 \strokec20 printf
+\f6\b0 \cf7 \strokec7 (\cf11 \strokec11 "the given previous node cannot be NULL"\cf7 \strokec7 ); 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 return
+\f6\b0 \cf7 \strokec7 ; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 \} 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 2. allocate new node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node* new_node = (
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node*)
+\f8\b \cf20 \strokec20 malloc
+\f6\b0 \cf7 \strokec7 (
+\f8\b \cf18 \strokec18 sizeof
+\f6\b0 \cf7 \strokec7 (
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node)); 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 3. put in the data\'a0 */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->data = new_data; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 4. Make next of new node as next of prev_node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->next = prev_node->next; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 5. Make the next of prev_node as new_node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 prev_node->next = new_node; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 6. Make prev_node as previous of new_node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->prev = prev_node; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 7. Change previous of new_node's next node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 if
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 (new_node->next != NULL) 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->next->prev = new_node; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf7 \strokec7 \} 
+\fs30\fsmilli15064 \cf2 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\f0\fs32 \cf2 \cb1 Five of the above steps step process are same as\'a0{\field{\*\fldinst{HYPERLINK "http://quiz.geeksforgeeks.org/linked-list-set-2-inserting-a-node/"}}{\fldrslt \cf3 \strokec3 the 5 steps used for inserting after a given node in singly linked list}}. The two extra steps are needed to change previous pointer of new node and previous pointer of new node\'92s next node.\
+\pard\pardeftab720\sl540\sa200\partightenfactor0
+
+\f1\b \cf2 3) Add a node at the end: (7 steps process)
+\f0\b0 \uc0\u8232 The new node is always added after the last node of the given Linked List. For example if the given DLL is 510152025 and we add an item 30 at the end, then the DLL becomes 51015202530.\u8232 Since a Linked List is typically represented by the head of it, we have to traverse the list till end and then change the next of last node to new node.\
+\pard\pardeftab720\sl540\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL_add_end1.png"}}{\fldrslt \cf3 \strokec3 \
+}}\pard\pardeftab720\sl540\sa200\partightenfactor0
+\cf2 Following are the 7 steps to add node at the end.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls4\ilvl0
+\fs36 \cf3 \cb4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 C\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri240\sl380\partightenfactor0
+\ls4\ilvl0\cf5 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Java\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Python3\
+\pard\pardeftab720\sl480\qj\partightenfactor0
+
+\f3\fs48 \cf6 \cb4 \strokec6 filter_none\
+\pard\pardeftab720\sl480\partightenfactor0
+\cf6 edit
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 play_arrow
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\f3\fs48 \cf6 \cb4 \strokec6 brightness_4
+\f0\fs32 \cf2 \cb1 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth15600\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\f6\fs29\fsmilli14913 \cf17 \cb4 \strokec17 /* Given a reference (pointer to pointer) to the head 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf2 \'a0\'a0\'a0\cf17 \strokec17 of a DLL and an int, appends a new node at the end\'a0 */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\f8\b\fs29\fsmilli14913 \cf18 \strokec18 void
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 append(
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node** head_ref, 
+\f8\b \cf19 \strokec19 int
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 new_data) 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf7 \strokec7 \{ 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf2 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 1. allocate node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node* new_node = (
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node*)
+\f8\b \cf20 \strokec20 malloc
+\f6\b0 \cf7 \strokec7 (
+\f8\b \cf18 \strokec18 sizeof
+\f6\b0 \cf7 \strokec7 (
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node)); 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 struct
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 Node* last = *head_ref; \cf17 \strokec17 /* used in step 5*/
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 2. put in the data\'a0 */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->data = new_data; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 3. This new node is going to be the last node, so 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf17 \strokec17 make next of it as NULL*/
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->next = NULL; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 4. If the Linked List is empty, then make the new 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf17 \strokec17 node as head */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 if
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 (*head_ref == NULL) \{ 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->prev = NULL; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 *head_ref = new_node; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 return
+\f6\b0 \cf7 \strokec7 ; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 \} 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 5. Else traverse till the last node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 while
+\f6\b0\fs30\fsmilli15064 \cf2 \strokec2  
+\fs29\fsmilli14913 \cf7 \strokec7 (last->next != NULL) 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 last = last->next; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 6. Change the next of last node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 last->next = new_node; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf17 \strokec17 /* 7. Make last node as previous of new node */
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf7 \strokec7 new_node->prev = last; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f8\b \cf18 \strokec18 return
+\f6\b0 \cf7 \strokec7 ; 
+\fs30\fsmilli15064 \cf2 \strokec2 \
+\pard\intbl\itap1\pardeftab720\sl357\partightenfactor0
+
+\fs29\fsmilli14913 \cf7 \strokec7 \} 
+\fs30\fsmilli15064 \cf2 \strokec2 \cell \lastrow\row
+}
