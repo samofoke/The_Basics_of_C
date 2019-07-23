@@ -1,0 +1,108 @@
+#include "push_checker.h"
+#include <stdlib.h>
+
+struct s_operations operations[] = {
+	{"sa", &swap_a},
+	{"sb", &swap_b},
+	{"ss", &swap_ab},
+	{"pa", &push_a},
+	{"pb", &push_b},
+	{"ra", &rot_a},
+	{"rb", &rot_b},
+	{"rr", &rot_ab},
+	{"rra", &rev_rot_a},
+	{"rrb", &rev_rot_b},
+	{"rrr", &rev_rot_ab}
+};
+
+int		perform_ops(char **oplist, t_link **stack_a)
+{
+	t_link	*stack_b;
+	int		i;
+
+	i = 0;
+	stack_b = NULL;
+	while (operations[i].op && *oplist)
+	{
+		if (!ft_strcmp(operations[i].op, *oplist))
+		{
+			operations[i].func(stack_a, &stack_b);
+			oplist++;
+			i = 0;
+		}
+		else
+			i++;
+	}
+	if (i > 10)
+	{
+		write(1, "Error\n", 6);
+		return (0);
+	}
+	return (1);
+}
+
+int		sort_check(char **oplist, t_link **stack_a)
+{
+	t_link	*save;
+
+	if (!perform_ops(oplist, stack_a))
+		return (-1);
+	save = *stack_a;
+	while (save && save->next)
+	{
+		if (save->next->n < save->n)
+			return (0);
+		save = save->next;
+	}
+	return (1);
+}
+
+t_link	*populate(int argc, char *argv[])
+{
+	t_link	*links;
+	t_link	*save;
+	int		n;
+	int		i;
+
+	links = create_link(0);
+	save = links;
+	i = 1;
+	while (i < argc)
+	{
+		if (!(n = ft_atoi(argv[i])) && *(argv[i]) != '0')
+			return (NULL);
+		links->next = create_link(ft_atoi(argv[i]));
+		links->next->prev = links;
+		save->next->prev = links->next;
+		links = links->next;
+		i++;
+	}
+	return (save->next);
+}
+
+int		main(int argc, char *argv[])
+{
+	t_link	*stack_a;
+	char	**oplist;
+	int		ret;
+
+	if (argc <= 1)
+	{
+		write(1, "Error\n", 6);
+		return (-1);
+	}
+	if (!(stack_a = populate(argc, argv)))
+	{
+		write(1, "Error\n", 6);
+		return (-1);
+	}
+	oplist = NULL;
+	oplist = fill_ops(oplist);
+	if ((ret = sort_check(oplist, &stack_a)) == 1)
+		printf("OK\n");
+	else if (!ret)
+		printf("KO\n");
+	oplist_free(oplist);
+	freestack(&stack_a);
+	return (0);
+}
