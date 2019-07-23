@@ -6,7 +6,7 @@
 /*   By: samofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 04:37:16 by samofoke          #+#    #+#             */
-/*   Updated: 2019/07/22 18:43:41 by samofoke         ###   ########.fr       */
+/*   Updated: 2019/07/23 16:50:08 by samofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,21 @@ struct				s_node
 };
 
 //adding a new node infront of the list.
-void	push_new(struct s_node **h_one, int new_data)
+void	push_new(struct s_node **head_rf, int new_data)
 {
 	struct s_node *new_node;
 
 	new_node = (struct s_node*)malloc(sizeof(struct s_node));
 	new_node->data = new_data;
-	new_node->next = (*h_one);
+	new_node->next = (*head_rf);
 	new_node->prev = NULL;
 
-	if ((*h_one) != NULL)
-		(*h_one)->prev = new_node;
-	(*h_one) = new_node;
+	if ((*head_rf) != NULL)
+		(*head_rf)->prev = new_node;
+	(*head_rf) = new_node;
 }
 
+//this functions adds a node after the prev node.
 void	add_after(struct s_node *p_node, int new_data)
 {
 	struct s_node *new_node;
@@ -45,6 +46,7 @@ void	add_after(struct s_node *p_node, int new_data)
 		printf("the prev node cannot be null.\n\n");
 		return ;
 	}
+	new_node = (struct s_node*)malloc(sizeof(struct s_node));
 
 	new_node->data = new_data;
 	new_node->next = p_node->next;
@@ -56,13 +58,13 @@ void	add_after(struct s_node *p_node, int new_data)
 }
 
 //this function appends a new node to the end.
-void	append(struct s_node *head_rf, int new_data)
+void	append(struct s_node **head_rf, int new_data)
 {
 	struct s_node *new_node;
 
 	new_node = (struct s_node*)malloc(sizeof(struct s_node));
 
-	struct s_node *last = head_rf;
+	struct s_node *last = *head_rf;
 
 	new_node->data = new_data;
 	new_node->next = NULL;
@@ -88,14 +90,14 @@ void	print_list(struct s_node *node)
 	printf("forward direction.\n");
 	while (node != NULL)
 	{
-		printf("%d\n", node->data);
+		printf(" %d ", node->data);
 		last = node;
 		node = node->next;
 	}
-	printf("reverse direction.\n");
+	printf("\nreverse direction.\n");
 	while (last != NULL)
 	{
-		printf("%d\n",last->data);
+		printf(" %d ",last->data);
 		last = last->prev;
 	}
 }
@@ -104,9 +106,12 @@ int		main(void)
 {
 	struct s_node *head = NULL;
 
-	push_new(&head, 3);
-	add_after(head->next, 4);
-	printf("added a list: \n\n");
+	//append(&head, 6);
+	push_new(&head, 7);
+	//push_new(&head, 1);
+	append(&head, 4);
+	add_after(head->next, 8);
+	printf("added a list: \n");
 	print_list(head);
 	//getchar();
 	return (0);
