@@ -6,7 +6,7 @@
 /*   By: samofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 04:37:16 by samofoke          #+#    #+#             */
-/*   Updated: 2019/07/23 16:50:08 by samofoke         ###   ########.fr       */
+/*   Updated: 2019/07/23 21:38:34 by slimy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct				s_node
+typedef struct			s_node
 {
 	int				data;
 	struct	s_node 	*next;
 	struct	s_node	*prev;
-};
+}				t_node;
 
 //adding a new node infront of the list.
-void	push_new(struct s_node **head_rf, int new_data)
+void	push_new(t_node **head_rf, int new_data)
 {
-	struct s_node *new_node;
+	t_node *new_node;
 
-	new_node = (struct s_node*)malloc(sizeof(struct s_node));
+	new_node = (t_node*)malloc(sizeof(t_node));
 	new_node->data = new_data;
 	new_node->next = (*head_rf);
 	new_node->prev = NULL;
@@ -37,9 +37,9 @@ void	push_new(struct s_node **head_rf, int new_data)
 }
 
 //this functions adds a node after the prev node.
-void	add_after(struct s_node *p_node, int new_data)
+void	add_after(t_node *p_node, int new_data)
 {
-	struct s_node *new_node;
+	t_node *new_node;
 
 	if (p_node == NULL)
 	{
@@ -58,13 +58,13 @@ void	add_after(struct s_node *p_node, int new_data)
 }
 
 //this function appends a new node to the end.
-void	append(struct s_node **head_rf, int new_data)
+void	append(t_node **head_rf, int new_data)
 {
-	struct s_node *new_node;
+	t_node *new_node;
 
-	new_node = (struct s_node*)malloc(sizeof(struct s_node));
+	new_node = (t_node*)malloc(sizeof(t_node));
 
-	struct s_node *last = *head_rf;
+	t_node *last = *head_rf;
 
 	new_node->data = new_data;
 	new_node->next = NULL;
@@ -83,9 +83,9 @@ void	append(struct s_node **head_rf, int new_data)
 }
 
 //printing the linked list from the given note.
-void	print_list(struct s_node *node)
+void	print_list(t_node *node)
 {
-	struct s_node *last;
+	t_node *last;
 
 	printf("forward direction.\n");
 	while (node != NULL)
@@ -104,7 +104,7 @@ void	print_list(struct s_node *node)
 
 int		main(void)
 {
-	struct s_node *head = NULL;
+	t_node *head = NULL;
 
 	//append(&head, 6);
 	push_new(&head, 7);
@@ -114,5 +114,6 @@ int		main(void)
 	printf("added a list: \n");
 	print_list(head);
 	//getchar();
+	printf("\n");
 	return (0);
 }
