@@ -6,7 +6,7 @@
 /*   By: samofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 04:37:16 by samofoke          #+#    #+#             */
-/*   Updated: 2019/07/23 21:38:34 by slimy            ###   ########.fr       */
+/*   Updated: 2019/07/30 15:20:03 by samofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct			s_node
+typedef struct		s_node
 {
 	int				data;
 	struct	s_node 	*next;
 	struct	s_node	*prev;
-}				t_node;
+}					t_node;
 
 //adding a new node infront of the list.
 void	push_new(t_node **head_rf, int new_data)
